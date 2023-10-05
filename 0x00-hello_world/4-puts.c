@@ -1,12 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - This is the entry point of the code.
+ * main - This is the entry point of the code
  * 
- * Return: 0 refers to successful operation.
+ * Description: C program returns sentence
  *
- * Description: A C programm returns a sentence. 
+ * Return: Always return 0 when success 
 */
-int main(){
-	puts("\"Programming is like building a multilingual puzzle \n");
-	return 0;
+
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
