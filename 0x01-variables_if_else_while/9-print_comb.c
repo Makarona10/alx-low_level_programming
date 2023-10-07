@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (x == 0)
 		{
-			continue;
+			;
 		}
 		else
 		{
