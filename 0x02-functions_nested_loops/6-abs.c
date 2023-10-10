@@ -5,7 +5,7 @@
  *
  * @x: The integer number will be checked
  *
- * Return:  always return 0
+ * Return: the absolute value of the input
  *
 */
 
@@ -13,8 +13,9 @@
 int _abs(int x)
 {
 	if (x <= 0)
-		printf("%d", (x * -1));
+		return (x * -1);
 	else
-		printf("%d", x);
-return (0);
+		return (x);
+
+	return (0);
 }
