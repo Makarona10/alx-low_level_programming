@@ -1,15 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point for the prog
+ * _islower - A function checks if the letter is lowercase
  *
- * Description: C Program checks for lowercase characters
+ * @c: The letter that the function will check on
  *
- * Return: always 0 when success
+ * Return: always 1 when lowercase and 0 if upper
 */
 
-int _islower(int c);
+int _islower(int c)
+{
+	if (c < 123 && c > 96)
 
-int main(void){
-	return (0);
+		return (1);
+
+	else
+		return (0);
+
 }
