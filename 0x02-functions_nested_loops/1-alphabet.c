@@ -1,21 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * main - Entry point for the prog
- *
- * Description: C Program prints alphabet
- *
- * Return: always 0 when success
+/*
+ * print_alphabet - C Program prints alphabet
 */
-
-
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 
 void print_alphabet(void)
 {
