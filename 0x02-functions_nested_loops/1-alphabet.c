@@ -1,8 +1,9 @@
-#include <stdio.h>
 #include "main.h"
 
-/*
- * print_alphabet - C Program prints alphabet
+/**
+ * print_alphabet - A c Program prints all alphabet using _putchar function
+ *
+ * Return: void
 */
 
 void print_alphabet(void)
