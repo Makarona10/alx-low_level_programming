@@ -9,7 +9,7 @@
  * Return: always 0 when success
 */
 
-void print_alphabet(void);
+
 
 int main(void)
 {
