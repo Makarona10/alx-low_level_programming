@@ -13,7 +13,7 @@ void jack_bauer(void)
 {
 	char time[] = "00:00";
 
-	int a, b, c, d;
+	int a, b, c, d, x;
 
 	for (a = 0; a <= 2; ++a)
 	{
@@ -35,7 +35,7 @@ void jack_bauer(void)
 				for (d = 0; d <= 9; ++d)
 				{
 					time[4] = d + '0';
-					for (int x = 0; x <= 4; x++)
+					for (x = 0; x <= 4; x++)
 					{
 						_putchar(time[x]);
 					}
