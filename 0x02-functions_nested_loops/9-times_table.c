@@ -23,7 +23,7 @@ void times_table(void)
 			}
 			if (num <= 9)
 			{
-				if (num > 0)
+				if (z > 0)
 				{
 				_putchar(' ');
 				_putchar(' ');
