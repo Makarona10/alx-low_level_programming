@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * Fizz_Buzz_test - Print all numbers from 1 t 100 and switches
