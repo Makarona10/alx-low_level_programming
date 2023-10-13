@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * Fizz_Buzz_test - Print all numbers from 1 t 100 and switches
+ * main - Print all numbers from 1 t 100 and switches
  * multiplies of 3 to fizz and multiplies of 5 to buzz and multiplies
  * of both to FizzBuzz
  *
@@ -32,7 +32,7 @@ int main(void)
 
 		if (x < 100)
 			printf(" ");
-		else 
+		else
 			printf("\n");
 	}
 	return (0);
