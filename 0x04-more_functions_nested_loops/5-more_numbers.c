@@ -19,7 +19,7 @@ void more_numbers(void)
 			{
 				z = y / 10;
 			}
-			putchar(z + '0');
+				_putchar(z + '0');
 			if (y > 9)
 			{
 				_putchar((y % 10) + '0');
@@ -27,5 +27,4 @@ void more_numbers(void)
 		}
 		_putchar('\n');
 	}
-	
 }
