@@ -12,6 +12,7 @@ void rev_string(char *s)
 {
 	int x = 0;
 	int y, indxs;
+	char temp = 's';
 
 	while (*(s + x) != 0)
 	{
@@ -19,7 +20,6 @@ void rev_string(char *s)
 	}
 	x--;
 	indxs = x;
-	char temp = 's';
 
 	for (y = 0; y <= indxs; y++)
 	{
