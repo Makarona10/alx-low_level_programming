@@ -16,11 +16,11 @@ void rev_string(char *s)
 	{
 		x++;
 	}
-
+	x--;
 	while (x >= 0)
 	{
-		putchar(*(s + x));
+		_putchar(*(s + x));
 		x--;
 	}
-
+	_putchar('\n');
 }
