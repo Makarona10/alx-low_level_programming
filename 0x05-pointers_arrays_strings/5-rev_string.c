@@ -11,18 +11,25 @@
 void rev_string(char *s)
 {
 	int x = 0;
+	int y, indxs;
 
 	while (*(s + x) != 0)
 	{
-		_putchar(*(s + x));
 		x++;
 	}
-	_putchar('\n');
 	x--;
-	while (x >= 0)
+	indxs = x;
+	char temp;
+
+	for (y = 0; y <= indxs; y++)
 	{
-		_putchar(*(s + x));
-		x--;
+		if (x > (indxs / 2))
+		{
+			temp = s[y];
+			s[y] = s[x];
+			s[x] = temp;
+			x--;
+		}
 	}
-	_putchar('\n');
 }
+
