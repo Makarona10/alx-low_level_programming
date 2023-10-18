@@ -18,7 +18,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*s1 != *s2)
 		{
-			eql = (*s1 - 48) - (*s2 - 48);
+			eql = (int)(*s1 - 48) - (int)(*s2 - 48);
 			break;
 		}
 		*s1++;
