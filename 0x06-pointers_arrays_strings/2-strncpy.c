@@ -20,7 +20,10 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		*(dest + y) = *(src + y);
 	}
-	dest[y] = '\0';
-
+	while (y < n)
+	{
+		dest[y] = '\0';
+		y++;
+	{
 	return (dest);
 }
