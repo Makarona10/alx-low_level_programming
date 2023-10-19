@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 -  encodes a string using rot13
+ * rot13 - encodes a string using rot13
  *
  * @s: The string will be encoded
  *
@@ -10,18 +10,20 @@
 
 char *rot13(char *s)
 {
-	int x;
+	int x = 0;
+	int y;
+	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[x] != '\0')
 	{
-		while ((s[x] >= 'a' && s[x] <= 'z') || (s[x] >= 'A' && s[x] <= 'Z'))
+		for (y = 0; y < 51; y++)
 		{
-			if ((s[x] >= 'a' && s[x] <= 'm') || (s[x] >= 'A' && s[x] <= 'M'))
-				s[x] += 13;
-
-			else
-				s[x] -= 13;
-			x++;
+			if (s[x] == rot[y])
+			{
+				s[x] = alpha[y];
+				break;
+			}
 		}
 		x++;
 	}
