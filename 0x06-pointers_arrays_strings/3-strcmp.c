@@ -12,18 +12,16 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int eql = 0;
+	int cmp = 0;
+	int x = 0;
 
-	while (*s1)
+	while (s1[x] = '\0')
 	{
-		if (*s1 != *s2)
-		{
-			eql = ((int)*s1 - 48) - ((int)*s2 - 48);
-			break;
-		}
-		*s1++;
-		*s2++;
-	}
+		if (s1[x] != s2[x])
+			cmp = s1[x] - s1[2];
 
-	return (eql);
+		x++;
+	}
+	return (cmp);
 }
+
