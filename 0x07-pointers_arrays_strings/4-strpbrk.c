@@ -15,13 +15,17 @@ char *_strpbrk(char *s, char *accept)
 {
 	int x = 0;
 	int y;
+	char *rtrn;
 
 	while (accept[x] != '\0')
 	{
 		for (y = 0; s[y] != '\0'; y++)
 		{
 			if (accept[x] == s[y])
+			{
+				rtrn = &s[y];
 				return (s + y);
+			}
 		}
 		x++;
 	}
