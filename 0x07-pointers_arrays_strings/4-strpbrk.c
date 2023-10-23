@@ -19,9 +19,9 @@ char *_strpbrk(char *s, char *accept)
 	if (s == NULL || accept == NULL)
 		return (NULL);
 
-	while (accept[x] >= '\0')
+	while (s[x] != '\0')
 	{
-		for (y = 0; s[y] >= '\0'; y++)
+		for (y = 0; accept[y] != '\0'; y++)
 		{
 			if (accept[x] == s[y])
 			{
