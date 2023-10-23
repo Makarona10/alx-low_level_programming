@@ -15,7 +15,6 @@ char *_strpbrk(char *s, char *accept)
 {
 	int x = 0;
 	int y;
-	char *rtrn;
 
 	if (s == NULL || accept == NULL)
 		return (NULL);
@@ -26,8 +25,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (accept[x] == s[y])
 			{
-				rtrn = &s[y];
-				return (rtrn);
+				return (s + y);
 			}
 		}
 		x++;
