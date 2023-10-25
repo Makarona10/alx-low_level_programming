@@ -15,12 +15,14 @@ int primetst(int n, int tst)
 {
 	if (n == 1 || ((n % tst == 0) && (n != tst) && (tst != 1)))
 		return (0);
+
 	else if (n < 0)
 		return (0);
+
 	else if (tst > 1)
 		primetst(n, --tst);
-	else
-		return (1);
+
+	return (1);
 }
 
 /**
