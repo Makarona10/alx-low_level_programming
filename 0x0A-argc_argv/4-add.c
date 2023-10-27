@@ -20,7 +20,9 @@ int main(int argc, char **argv)
 	char *y;
 
 	if (argc == 1)
+	{
 		;
+	}
 
 	while (x++ != (argc - 1))
 	{
