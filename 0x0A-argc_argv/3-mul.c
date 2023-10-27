@@ -9,7 +9,7 @@
  * @argv: array of character pointers that
  * point to the command-line arguments
  *
- * Return: always 0
+ * Return: always 1
 */
 
 int main(int argc, char **argv)
@@ -23,5 +23,5 @@ int main(int argc, char **argv)
 		result = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", result);
 	}
-	return (0);
+	return (1);
 }

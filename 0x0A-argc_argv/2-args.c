@@ -8,7 +8,7 @@
  * @argv: array of character pointers that
  * point to the command-line arguments
  *
- * Return: always 1
+ * Return: always 0
 */
 
 int main(int argc, char **argv)
@@ -20,5 +20,5 @@ int main(int argc, char **argv)
 		printf("%s\n", argv[x++]);
 	}
 
-	return (1);
+	return (0);
 }
