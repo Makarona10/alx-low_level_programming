@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	char *y;
 
 	if (argc == 1)
-		printf("0\n");
+		;
 
 	while (x++ != (argc - 1))
 	{
@@ -35,5 +35,5 @@ int main(int argc, char **argv)
 		res = res + atoi(argv[x]);
 	}
 	printf("%d\n", res);
-	return (1);
+	return (0);
 }
