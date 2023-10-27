@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		{
 			if (*y < '0' || *y > '9')
 			{
-			printf("ERROR\n");
+			printf("Error\n");
 			return (1);
 			}
 		}
