@@ -27,23 +27,24 @@ void _to_hexa(int dec)
 	}
 	else
 	{
-	while (dec > 9)
-	{
-		remain = dec % 16;
+		while (dec > 9)
+		{
+			remain = dec % 16;
 
-		if (remain > 9)
-			hex[x] = 'A' + (remain - 10);
+			if (remain > 9)
+				hex[x] = 'A' + (remain - 10);
 
-		else
-			hex[x] = ('0' + remain);
+			else
+				hex[x] = ('0' + remain);
 
-		x++;
-		dec = (dec / 16);
-	}
+			x++;
+			dec = (dec / 16);
+		}
 	}
 	while (x--)
+	{
 		_putchar(hex[x]);
-
+	}
 		_putchar(' ');
 }
 
