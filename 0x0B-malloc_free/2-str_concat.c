@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	char *ch;
 
 	if ((s1 == NULL) && (s2 == NULL))
-	return NULL;
+	return "";
 
 	ch = malloc((len1 + len2 + 1));
 
