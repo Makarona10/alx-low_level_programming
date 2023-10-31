@@ -35,7 +35,7 @@ int get_len(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int x, y,
+	int x = 0, y = 0,
 		len1 = get_len(s1),
 		len2 = get_len(s2);
 	char *ch;
@@ -53,13 +53,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 != NULL)
 	{
-		for (x = 0; x < len1; x++)
+		for (; x < len1; x++)
 			ch[x] = s1[x];
 	}
 
 	if (s2 != NULL)
 	{
-		for (y = 0; y <= len2; y++)
+		for (; y <= len2; y++)
 			ch[x++] = s2[y];
 	}
 
