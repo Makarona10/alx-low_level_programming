@@ -14,22 +14,18 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *ptr, *ptr2;
-	unsigned int alloc, x = 0;
+	unsigned int x = 0;
 
-	alloc = size * nmemb;
-
-	if (alloc == 0)
+	if (size == 0 || nmemb == 0)
 		return (NULL);
 
-	ptr = malloc(alloc);
+	ptr = malloc(sizeof(int) * nmemb);
 
 	if (ptr == NULL)
-	{
-		free(ptr);
 		return (NULL);
-	}
+
 	ptr2 = ptr;
-	for (; x < alloc; x++)
+	for (; x < (nmemb * sizeof(int)); x++)
 		*ptr2++ = 0;
 
 	return (ptr);
