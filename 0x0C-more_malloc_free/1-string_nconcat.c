@@ -53,7 +53,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = '\0';
 
-	nptr = malloc(s1len + n);
+	nptr = malloc(s1len + n + 1);
 
 	if (nptr == NULL)
 	{
