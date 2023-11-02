@@ -39,8 +39,7 @@ int get_len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *nptr;
-	unsigned int s1len, s2len;
-	int x;
+	unsigned int s1len, s2len, x;
 
 	s1len = get_len(s1);
 	s2len = get_len(s2);
