@@ -8,21 +8,8 @@
 
 int main(void)
 {
-	int x = 0;
-	int bslash = 0;
-	char *fname = __FILE__;
 
-	while (fname[x] != '\0')
-	{
-		if (fname[x] == '\\')
-			bslash = x + 1;
-		x++;
-	}
+	printf("%s", __FILE__);
 
-	while (fname[bslash] != '\0')
-	{
-		printf("%c", fname[bslash]);
-		bslash++;
-	}
 	return (0);
 }
