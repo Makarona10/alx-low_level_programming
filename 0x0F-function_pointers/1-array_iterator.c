@@ -6,9 +6,9 @@
   * as a parameter on each element of an array
   *
   * @array: The array will be iterated
-  * 
+  *
   * @size: saize of the array
-  * 
+  *
   * @action: a pointer to a function
   *
   * Return: void
