@@ -94,7 +94,8 @@ void print_all(const char *const format, ...)
 			}
 			y++;
 		}
-			x++;
+		x++;
 	}
 	printf("\n");
+	va_end(vl);
 }
