@@ -1,103 +1,58 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 
-/**
- * f_char - formatting for characters
- *
- * @sep: The seperator between strings
- *
- * @vl: A pointer to args
-*/
-
-
-void f_char(char *sep, va_list vl)
+void print_all(const char* const format, ...)
 {
-	printf("%s%c", sep, va_arg(vl, int));
-}
+	va_list l;
+	unsigned int x = 0, s = 0;
+	char* a;
 
-/**
- * f_float - formatting for float numbers
- *
- * @sep: The seperator between numbers
- *
- * @vl: A pointer to args
-*/
-
-void f_float(char *sep, va_list vl)
-{
-	printf("%s%f", sep, va_arg(vl, double));
-}
-
-/**
- * f_string - formatting for strings
- *
- * @sep: The seperator between strings
- *
- * @vl: A pointer to args
-*/
-
-void f_string(char *sep, va_list vl)
-{
-	char *s;
-
-	s = va_arg(vl, char*);
-
-	if (s == NULL)
+	va_start(l, format);
+	while (format && format[x] != '\0')
 	{
-		printf("%s%s", sep, "(nil)");
-		return;
-	}
-	printf("%s%s", sep, s);
-}
-
-/**
- * f_int - formatting for integer numbers
- *
- * @sep:ذ The seperator between numbers
- *
- * @vl: A pointer to args
-*/
-
-void f_int(char *sep, va_list vl)
-{
-	printf("%s%d", sep, va_arg(vl, int));
-}
-
-/**
- * print_all - prints what user passes to it
- *
- * @format: The formatter for what user passes
- *
- * Return: void
-*/
-
-void print_all(const char *const format, ...)
-{
-	int x = 0, y;
-	va_list vl;
-	char *sep;
-	spec specifiers[] = {
-		{"c", f_char},
-		{"f", f_float},
-		{"i", f_int},
-		{"s", f_string},
-		{NULL, NULL}
-	};
-	va_start(vl, format);
-	while (format[x] && format)
-	{
-		y = 0;
-		while (specifiers[y].formatter)
+		switch (format[x])
 		{
-			if (format[x] == specifiers[y].formatter[0])
+		case 'c':
+			switch (s)
 			{
-				specifiers[y].f(sep, vl);
-				sep = ", ";
+			case 1: printf(", ");
 			}
-			y++;
+			s = 1;
+			printf("%c", va_arg(l, int));
+			break;
+		case 'i':
+			switch (s)
+			{
+			case 1: printf(", ");
+			}
+			s = 1;
+			printf("%i", va_arg(l, int));
+			break;
+		case 'f':
+			switch (s)
+			{
+			case 1: printf(", ");
+			}
+			s = 1;
+			printf("%f", va_arg(l, double));
+			break;
+		case's':
+			switch (s)
+			{
+			case 1: printf(", ");
+			}
+			s = 1;
+			a = va_arg(l, char);
+			if (a)
+			{
+				printf("%s", a);
+				break;
+			}
+			printf("%p", a);
+			break;
 		}
 		x++;
 	}
 	printf("\n");
-	va_end(vl);
+	va_end(l);
 }
