@@ -42,17 +42,18 @@ void f_string(char *sep, va_list vl)
 
 	s = va_arg(vl, char*);
 
-	switch ((int)(!s))
-		case 1:
-			s = "(nil)";
-
-			printf("%s%s", sep, s);
+	if (p == NULL)
+	{
+		printf("%s%s", separator, "(nil)");
+		return;
+	}
+	printf("%s%s", sep, s);
 }
 
 /**
  * f_int - formatting for integer numbers
  *
- * @sep: The seperator between numbers
+ * @sep:ذ The seperator between numbers
  *
  * @vl: A pointer to args
 */
