@@ -9,14 +9,17 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct format_types - Struct format_types
- * @identifier: The conversion specifier
- * @f: The function pointer
- */
-typedef struct format_types
+ * struct spec - The print func specifier
+ *
+ * @specifier: the format specifier passed
+ *
+ * @f: The function will be passed
+*/
+
+typedef struct specifier
 {
-	char *identifier;
-	void (*f)(char *separator, va_list args);
-} f_dt;
+	char *formatter;
+	void (*f)(char *, va_list);
+} spec;
 
 #endif
