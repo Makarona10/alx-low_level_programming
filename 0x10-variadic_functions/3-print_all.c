@@ -42,9 +42,9 @@ void f_string(char *sep, va_list vl)
 
 	s = va_arg(vl, char*);
 
-	if (p == NULL)
+	if (s == NULL)
 	{
-		printf("%s%s", separator, "(nil)");
+		printf("%s%s", sep, "(nil)");
 		return;
 	}
 	printf("%s%s", sep, s);
