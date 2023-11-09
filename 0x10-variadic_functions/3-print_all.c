@@ -41,6 +41,7 @@ void f_string(char *sep, va_list vl)
 	char *s;
 
 	s = va_arg(vl, char*);
+
 	switch ((int)(!s))
 		case 1:
 			s = "(nil)";
