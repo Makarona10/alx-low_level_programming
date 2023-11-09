@@ -86,7 +86,7 @@ void print_all(const char *const format, ...)
 	while (format[x] && format)
 	{
 		y = 0;
-		while (specifiers[y].token)
+		while (specifiers[y].formatter)
 		{
 			if (format[x] == specifiers[y].formatter[0])
 			{
@@ -95,7 +95,7 @@ void print_all(const char *const format, ...)
 			}
 			y++;
 		}
-		x++;
+			x++;
 	}
 	printf("\n");
 }
