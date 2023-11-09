@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <stdarg.g>
+#include <stdarg.h>
 
 /**
  * f_char - formatting for characters
@@ -74,7 +74,6 @@ void print_all(const char *const format, ...)
 	int x = 0, y;
 	va_list vl;
 	char *sep;
-
 	spec specifiers[] = {
 		{"c", f_char},
 		{"f", f_float},
