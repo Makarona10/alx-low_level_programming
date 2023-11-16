@@ -31,26 +31,23 @@ int get_len(char *s)
 
 size_t print_list(const list_t *h)
 {
-	list_t *current;
-	size_t ret_value;
-
-	current = h->next;
+	size_t ret_value = 0;
 
 	if (h == NULL)
 		return (0);
 
-	while (current != NULL)
+	while (h != NULL)
 	{
-		if (current->str == NULL)
+		if (h->str == NULL)
 		{
 			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%d] %s\n", get_len(current->str), current->str);
+			printf("[%d] %s\n", get_len(h->str), h->str);
 		}
-		current = current->next;
-		ret_value = current->len;
+		h = h->next;
+		ret_value++;
 	}
 
 	return (ret_value);
