@@ -31,8 +31,9 @@ int get_len(char *s)
 
 size_t print_list(const list_t *h)
 {
-	size_t ret_value = 0;
+	size_t ret_value;
 
+	ret_value = 0;
 	if (h == NULL)
 		return (0);
 
