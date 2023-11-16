@@ -30,7 +30,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			free(n_node);
 			return (NULL);
 		}
-		n_node->len = get_lenc(n_node->str);
+		n_node->len = get_lenc(str);
 	}
 	if (current != NULL)
 	{
