@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+* get_len - gets the length of a string
+*
+* @s: The string input to calculate the length of
+*
+* Return: The length of a string
+*/
+
+int get_len(char *s)
+{
+	int len = 0;
+	int x = 0;
+
+	if (s != NULL)
+	{
+		while (s[x++] != '\0')
+			len++;
+	}
+	return (len);
+}
+
+/**
  * print_list - prints all the elements of a list_t list
  *
  * @h: The header of a list
@@ -22,11 +43,11 @@ size_t print_list(const list_t *h)
 	{
 		if (current->str == NULL)
 		{
-			printf("[%d] (nil)\n", current->len);
+			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("[%d] %s\n", current->len, current->str);
+			printf("[%d] %s\n", get_len(current->len), current->str);
 		}
 		current = current->next;
 		ret_value = current->len;
