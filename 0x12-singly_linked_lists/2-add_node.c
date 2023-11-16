@@ -9,7 +9,7 @@
 * Return: The length of a string
 */
 
-int get_len(char* s)
+int get_len(const char *s)
 {
 	int len = 0;
 	int x = 0;
