@@ -47,7 +47,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%d] %s\n", get_len(current->len), current->str);
+			printf("[%d] %s\n", get_len(current->str), current->str);
 		}
 		current = current->next;
 		ret_value = current->len;
