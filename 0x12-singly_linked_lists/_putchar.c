@@ -13,20 +13,3 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-
-/**
-* _print - prints a string
-*
-* @s: The string will be printed
-*
-* Return: length of printed string
-*/
-
-int _print(char *s)
-{
-	short int x;
-
-	for (x = 0; s[x] != '\0'; x++)
-		_putchar(s[x]);
-	return (x);
-}

@@ -9,7 +9,7 @@
 * Return: The length of a string
 */
 
-int get_len(const char *s)
+int get_lenc(const char* s)
 {
 	int len = 0;
 	int x = 0;
@@ -49,7 +49,7 @@ list_t *add_node(list_t **head, const char *str)
 			free(n_node);
 			return (NULL);
 		}
-		n_node->len = get_len(n_node->str);
+		n_node->len = get_lenc(n_node->str);
 	}
 
 	n_node->next = *head;
