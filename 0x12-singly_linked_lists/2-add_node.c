@@ -1,5 +1,5 @@
 #include "lists.h"
-#include<string.h>
+#include <string.h>
 
 /**
 * get_len - gets the length of a string
@@ -44,6 +44,11 @@ list_t *add_node(list_t **head, const char *str)
 	if (str)
 	{
 		n_node->str = strdup(str);
+		if (n_node->str == NULL)
+		{
+			free(n_node);
+			return (NULL);
+		}
 		n_node->len = get_len(n_node->str);
 	}
 
