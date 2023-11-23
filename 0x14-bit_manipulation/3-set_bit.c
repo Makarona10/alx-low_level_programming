@@ -5,7 +5,7 @@
  *
  * @n: The given number by user
  *
- * @index: the index will be set 
+ * @index: the index will be set
  *
  * Return: 1 when success, -1 when fails
 */
