@@ -46,8 +46,8 @@ int main(int argc, char **argv)
 	if (f_f)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, f_f), exit(100);
 
-	 if (to_f)
-                dprintf(STDERR_FILENO, ERR_NOCLOSE, f_f), exit(100);
+	if (to_f)
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, f_f), exit(100);
 
-	 return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
