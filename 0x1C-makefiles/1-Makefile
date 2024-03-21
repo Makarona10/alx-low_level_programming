@@ -1,0 +1,7 @@
+# A makefile for an automated compilation
+
+CC = gcc
+SRC = school.c main.c
+
+all: SRC
+	$(CC) $(SRC) -o school
