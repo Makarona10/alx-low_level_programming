@@ -1,0 +1,5 @@
+# A make file for a c program compilation
+
+all: main.c school.c
+	gcc main.c school.c -o school
+
