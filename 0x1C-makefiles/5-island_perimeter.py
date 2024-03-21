@@ -4,17 +4,19 @@
 
 def island_perimeter(grid):
     """ Island Perimeter func """
-    peri = 0
-    gl = []
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            gl.append(grid[i][j])
-    for i in range(len(gl)):
-        if i < len(gl) - 1 and i > 0:
-            if gl[i] == 0 and gl[i + 1] == 1 or gl[i] == 0 and gl[i - 1] == 1:
-                peri += 1
-    if peri % 2 == 0:
-        peri *= 2
-    else:
-        peri = (peri * 2) - 1
-    return peri
+    c = 0
+    length = len(grid) - 1
+    width = len(grid[0]) - 1
+
+    for i, r in enumerate(grid):
+        for j, n in enumerate(r):
+            if n == 1:
+                if i == 0 or grid[i - 1][j] != 1:
+                    c += 1
+                if j == 0 or grid[i][j - 1] != 1:
+                    c += 1
+                if j == width or grid[i][j + 1] != 1:
+                    c += 1
+                if i == length or grid[i + 1][j] != 1:
+                    c += 1
+    return c
